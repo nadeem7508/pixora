@@ -1,12 +1,6 @@
 [build]
   publish = "."
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -14,7 +8,6 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
-    Cache-Control = "public, max-age=3600"
 
 [[headers]]
   for = "/js/*"
